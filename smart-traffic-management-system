@@ -1,0 +1,52 @@
+print("=" * 45)
+print("       SMART TRAFFIC MANAGEMENT SYSTEM")
+print("=" * 45)
+# Traffic density on different roads
+traffic = {
+    "Road A": 25,
+    "Road B": 60,
+    "Road C": 40,
+    "Road D": 80
+}
+print("\nTraffic Density:")
+print("-" * 30)
+for road, vehicles in traffic.items():
+    print(f"{road}: {vehicles} vehicles")
+print("\nTraffic Signal Timing:")
+print("-" * 30)
+for road, vehicles in traffic.items():
+    if vehicles >= 70:
+        green_time = 60
+    elif vehicles >= 40:
+        green_time = 45
+    else:
+        green_time = 30
+    print(f"{road}: Green Light = {green_time} seconds")
+# Find the road with highest traffic
+highest_traffic = max(traffic, key=traffic.get)
+print("\nHighest Traffic:")
+print(f"{highest_traffic} has the highest traffic density.")
+print("=" * 45)
+
+OUTPUT:
+=============================================
+       SMART TRAFFIC MANAGEMENT SYSTEM
+=============================================
+
+Traffic Density:
+------------------------------
+Road A: 25 vehicles
+Road B: 60 vehicles
+Road C: 40 vehicles
+Road D: 80 vehicles
+
+Traffic Signal Timing:
+------------------------------
+Road A: Green Light = 30 seconds
+Road B: Green Light = 45 seconds
+Road C: Green Light = 45 seconds
+Road D: Green Light = 60 seconds
+
+Highest Traffic:
+Road D has the highest traffic density.
+=============================================
